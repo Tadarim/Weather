@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 主体 */
+#main{
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(skyblue,white);
+    
+}
+
+/* 头部 */
+header{
+    width: 100%;
+    height: 65px;
+    /* background-color: #bfa; */
+    border-bottom: 2px solid white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* 头部城市信息 */
+header #location-wrapper{
+    width: 200px;
+    height: 50px;
+    margin-left: 150px;
+    display: flex;
+    line-height: 50px;
+}
+
+header #location-wrapper i{
+    font-size: 20px;
+}
+
+header #location{
+    width: 100px;
+    height: 50px;
+    text-align: left;
+}
+
+/* 搜索框 */
+header #search-wrapper{
+    
+    width: 320px;
+    height: 35px;
+    margin-right: 200px;
+    border: 1px solid white;
+    border-radius: 35px;               
+    display:flex;
+}
+
+header #search{
+    border: none;
+    outline: none;
+
+    margin: 0 14px;
+    padding-left:10px;
+
+    width: 240px;
+    height: 35px;
+    font-size: 16px;
+    background-color: skyblue;
+} 
+
+header #btn{
+    outline: none;
+    border: none;
+    background-color: skyblue;
+    color: white;
+}
+
+
+/* banner */
+#banner{
+    width: 100%;
+    width: 1400px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* 实时天气 */
+#timeWeather #temp{
+    margin-left: 50px;
+    margin-top: 40px;
+    
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    
+    color: #fff;
+}
+
+/* 实时天气数值 */
+#temp #number{
+    height: 100%;
+    width: 150px;
+    
+    font-size: 90px;
+}
+
+/* 实时天气状况 */
+#temp #text{
+    
+    /* height: 100%; */
+    /* width: 50px; */
+    padding-top: 50px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+/* 实时空气质量 */
+#temp #aqi{
+    position: relative;
+    padding-top: 65px;
+    
+}
+
+/* 实时风向 */
+#timeWeather #wind-wrapper{
+    line-height: 1;
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+    color: white;
+    font-size: 20px;
+}
+
+#wind-wrapper #wind{
+    margin-left: 10px;
+    height: 100%;
+    margin-right: 40px;
+}
+
+/* 实时湿度 */
+#wind-wrapper #humidity{
+    height: 100%;
+    margin-left: 10px;
+
+    margin-right: 40px;
+}
+
+/* 实时气压 */
+#wind-wrapper #pressure{
+    margin-left: 10px;
+    
+}
+
+#txt{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 50px;
+    color: #fff;
+    text-align: left;
+}
+
+/* 天气图标 */
+#banner #weatherIcon{
+    padding-top: 40px;
+    padding-right: 300px;
+    color: #fff;
+    font-size: 200px;
+    z-index: 2;
+}
+
+
+#aqi #aqi-content {
+    line-height: 20px;
+    display: block;
+    padding: 0 10px;
+    /* width: 60px; */
+    height: 20px;
+    font-size: 13px;
+    border-radius: 40px;
+    
+}
+
+/* 空气质量下拉框 */
+#aqi-content:hover ~ #aqi-hover,
+#aqi-content:hover ~ #aqi-hover::before
+{
+    display: block;
+    height: 170px;
+}
+
+#aqi-hover::before{
+    content: '';
+    display: block;
+    width: 0;
+
+    position: absolute;
+    top: -178px;
+    left: 115px;
+
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color:#fff;
+
+    margin: auto;
+    display: none; 
+} 
+
+#aqi-hover{
+    display: none;
+    position: absolute;
+    top: 93px;
+
+    border-radius: 20px;
+    right: -100px;
+    width: 250px;
+    height: 0px;
+    background-color: #fff;
+
+    z-index: 4;
+}
+
+#aqi-hover #top{
+    border-radius: 20px 20px 0 0;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+#aqi-hover #aqi-info{
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+}
+
+#aqi-info li{
+    height: 65px;
+    position: relative;
+    line-height: 25px;
+    color: #333;
+}
+
+#aqi-info span{
+    margin-top: 10px;
+    display: block;
+    color: #665e57;
+}
+
+/* 设置上边框 */
+#aqi-info li::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #665e57;
+    left: 2px;
+}
+
+/* 设置左边框 */
+#aqi-info li::after{
+    content: '';
+    position: absolute;
+    height: 64px;
+    width: 1px;
+    background-color: #665e57;
+    top: 0;
+    left: 0;
+    bottom: 0 ;
+    margin: 0 auto;
+}
+
+#aqi-info li:first-child::after,
+#aqi-info li:nth-child(4)::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 1px;
+    background-color: #665e57;
+    top: 0;
+    left: 0;
+    bottom: 0 ;
+    margin: 0 auto;
+}
+
+/* 底部生活指数 */
+footer{
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+footer #left, #right{
+    color: #fff;
+    float: right;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    opacity: 1.0;
+    margin-right: 20px;
+} 
+
+footer #life-text{
+    font-size: 25px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    
+}
+
+footer #life-wrapper{
+    position: relative;
+    
+    width: 100%;
+    margin-top: 30px;
+    height: 170px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+footer #life{
+    position: absolute;
+    transition: all 1.5s;
+    width: 200%;
+    left: 0;
+    height: 170px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer #life li{
+    position: relative;
+    height: 100%;
+    
+    width: 200px;
+   
+}
+
+footer #life li div{
+    position: absolute;
+    top: 0;
+    padding-top: 50px;
+    width: 100%;
+    height: 200%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 14px 10px rgba(0,0,0, .3);
+    transition: all 1s;
+}
+
+footer #life li div:hover
+{
+   top: -170px;
+}
+
+footer #life li div .outer{
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer #life li div .detail{
+    padding-top: 40px;
+    margin-left: 5%;
+    font-size: 14px;
+    width: 90%;
+    height: 50%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+footer #life li i{
+    display: block;
+    font-size: 40px;
+    text-align: center;
+}
+
+

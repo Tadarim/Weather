@@ -1,0 +1,16 @@
+{
+  "id": "3184744",
+  "name": "222",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1134298",
+      "name": "map",
+      "font_class": "map",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}

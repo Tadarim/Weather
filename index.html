@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气</title>
+    <link rel="stylesheet" href="./iconfont/location/iconfont.css">
+    <link rel="stylesheet" href="./iconfont/search/iconfont.css">
+    <link rel="stylesheet" href="./iconfont/weather/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.1/font/qweather-icons.css">
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <div id="location-wrapper">
+                <i class="iconfont">&#xe62e;</i>
+                <div id="location"></div>
+            </div>
+            <div id="search-wrapper">
+                <input type="text" value="" id="search" placeholder="输入要查询的城市">
+                <button id="btn">
+                    <i class="iconfont">&#xe64f;</i>
+                </button>
+            </div>
+
+        </header>
+        <div id="banner">
+            <div id="timeWeather">
+                <div id="temp">
+                    <p id="number">32°</p>
+                    <p id="text">晴</p>
+                    <div id="aqi">
+                        <span id="aqi-content"> 74 良</span>
+                        <div id="aqi-hover">
+                            <div id="top">空气质量指数 74 良</div>
+                            <ul id="aqi-info">
+                                <li>1<span>PM2.5</span></li>
+                                <li>1<span>PM10</span></li>
+                                <li>1<span>SO2</span></li>
+                                <li>1<span>NO2</span></li>
+                                <li>1<span>O3</span></li>
+                                <li>1<span>CO</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="wind-wrapper">
+                    <i class="iconfont">&#xe61d;</i>
+                    <p id="wind">东南风 2级</p>
+                    <i class="iconfont" style="font-size: 20px;">&#xe682;</i>
+                    <p id="humidity">湿度 47%</p>
+                    <i class="iconfont">&#xe6c0;</i>
+                    <p id="pressure">气压 1001hPa</p>
+                </div>
+                <p id="txt">你若安好，便是晴天~</p>
+            </div>
+            <div id="weatherIcon">
+                <i class="qi-301"></i>
+            </div>
+        </div>
+        <footer>
+            <p id="life-text" style="color: #fff;">&nbsp&nbsp&nbsp&nbsp°生活指数
+                <button id="right" class="iconfont" style="font-size: 30px;">&#xe619;</button>
+                <button id="left" class="iconfont" style="font-size: 30px;">&#xe609;</button>
+            </p>
+            <div id="life-wrapper">
+                <ul id="life">
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe610;</i>
+                            <p class="outer">穿衣</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe603;</i>
+                            <p class="outer">感冒</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe625;</i>
+                            <p class="outer">花粉</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont">&#xec6d;</i>
+                            <p class="outer">洗车</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe61b;</i>
+                            <p class="outer">运动</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe64c;</i>
+                            <p class="outer">防晒</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont">&#xe6a0;</i>
+                            <p class="outer">钓鱼</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont">&#xe612;</i>
+                            <p class="outer">旅行</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont">&#xe608;</i>
+                            <p class="outer">交通</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe707;</i>
+                            <p class="outer">空气污染扩散条件</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe688;</i>
+                            <p class="outer">舒适度</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="iconfont" style="font-weight: bold;">&#xe601;</i>
+                            <p class="outer">晾晒</p>
+                            <p class="detail">下</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
