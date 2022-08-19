@@ -1,3 +1,7 @@
+onload =>{
+    var canvas=document.getElementById("canvas");
+}
+
 function getAjax(httpurl, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', httpurl);
