@@ -1,5 +1,7 @@
 onload =>{
     var canvas=document.getElementById("canvas");
+    let dayUrl = 'https://devapi.qweather.com/v7/weather/7d?location=101110101&key=a8919d085a214522b6bfb62bd2e1ccd7';
+    dayWeather(dayUrl,101110101);
 }
 
 function getAjax(httpurl, callback) {
